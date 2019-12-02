@@ -1,6 +1,6 @@
 <?php
-$username="vvesley";
-$password="1334";
+$username="";
+$password="";
 $database="amovie";
 $host="localhost";
 

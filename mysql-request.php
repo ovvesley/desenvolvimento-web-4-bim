@@ -1,7 +1,6 @@
 <?php
 function query_db($query)
 {
-    // global $mysql_host, $mysql_user, $mysql_password, $mysql_database;
     require "./credential.php";
     $connect = mysqli_connect($mysql_host, $mysql_user, $mysql_password, $mysql_database);
     if (!$connect) {

@@ -41,17 +41,17 @@
                     Registre-se no <span class="title-amar">amo</span>vie.
                 </span>
                 <form class="login100-form validate-form p-b-33 p-t-5" action="script-registrar.php" method="POST">
-                    <div class="wrap-input100 validate-input" data-validate="">
+                    <div class="wrap-input100 validate-input" data-validate="Por favor, insira seu username">
                         <input class="input100" type="text" name="username" placeholder="Digite seu Username">
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                    <div class="wrap-input100 validate-input" data-validate="Por favor, insira sua senha">
                         <input class="input100" type="password" name="password" placeholder="Digite sua Senha">
                         <span class="focus-input100" data-placeholder="&#xe80f;"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                    <div class="wrap-input100 validate-input" data-validate="Por favor, confirme sua senha">
                         <input class="input100" type="password" name="repassword" placeholder="Confirme sua senha">
                         <span class="focus-input100" data-placeholder="&#xe80f;"></span>
                     </div>

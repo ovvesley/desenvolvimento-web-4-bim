@@ -9,7 +9,7 @@ function renderCard($info = array(
 ))
 {
 	echo ("
-  <div class='card m-5 p-4 matchCard'>
+  <div class='card m-5 p-4 matchCard anim '>
         <h6>$info[ano]</h6>
 		<h5>$info[titulo]</h5>
 		<div class='item'>

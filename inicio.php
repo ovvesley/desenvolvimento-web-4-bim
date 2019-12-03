@@ -4,6 +4,8 @@ function renderCard($info = array(
 	"titulo" => "5000 dias com ela",
 	"ano" => "20xx",
 	"image" => "images/movie-01.jpeg",
+	'idUsuario' => '0',
+	'idFilme' => '0'
 ))
 {
 	echo ("
@@ -15,10 +17,28 @@ function renderCard($info = array(
 		</div>
         <div class='card-body'>
         <hr>
-        <div class='d-flex justify-content-center m-3'>                 
-            <button class='btn btn-danger m-2 btn-lg'> <i class='fa fa-heart'></i></button>
-            <button class='btn btn-secondary m-2 btn-lg'> <i class='fa fa-thumbs-down'></i> </button> 
-       
+		<div class='d-flex justify-content-center m-3'> 
+		<form action='like.php' method='post'>
+			<button class='btn btn-danger m-2 btn-lg'>
+				<i class='fa fa-heart'>
+					<input name='amou' value='1' type='hidden' />
+					<input name='idUsuario' value='$info[idUsuario]' type='hidden' />
+					<input name='idFilme' value='$info[idFilme]' type='hidden' />
+
+				</i>
+			 </button>
+		</form>
+		
+		<form action='like.php' method='post'>
+			<button class='btn btn-secondary m-2 btn-lg'>
+				<i class='fa fa-thumbs-down'>
+					<input name='amou' value='0' type='hidden' />
+					<input name='idUsuario' value='$info[idUsuario]' type='hidden' />
+					<input name='idFilme' value='$info[idFilme]' type='hidden' />
+				</i>
+			 </button>
+		</form>
+		
          </div>
     </div>
     ");
@@ -48,8 +68,6 @@ function renderCard($info = array(
 						<?php
 						renderCard();
 						?>
-
-
 					</div>
 				</div>
 			</div>

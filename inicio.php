@@ -1,19 +1,19 @@
 <?php
 
 function renderCard($info = array(
-	"titulo" => "5000 dias com ela",
-	"ano" => "20xx",
-	"image" => "images/movie-01.jpeg",
+	"titulo" => "Loading...",
+	"ano" => "Loading...",
+	"image" => "images/loading.gif",
 	'idUsuario' => '0',
 	'idFilme' => '0'
 ))
 {
 	echo ("
   <div class='card m-5 p-4 matchCard anim '>
-        <h6>$info[ano]</h6>
-		<h5>$info[titulo]</h5>
+        <h6 id='ano'>$info[ano]</h6>
+		<h5 id='titulo'>$info[titulo]</h5>
 		<div class='item'>
-       	 <img class='card-img-top img-card' src='$info[image]' alt='Card image cap'>
+       	 <img class='card-img-top img-card' id='image-poster' src='$info[image]' alt='Card image cap'>
 		</div>
         <div class='card-body'>
         <hr>
@@ -23,7 +23,7 @@ function renderCard($info = array(
 				<i class='fa fa-heart'>
 					<input name='amou' value='1' type='hidden' />
 					<input name='idUsuario' value='$info[idUsuario]' type='hidden' />
-					<input name='idFilme' value='$info[idFilme]' type='hidden' />
+					<input class='idFilme' name='idFilme' value='$info[idFilme]' type='hidden' />
 
 				</i>
 			 </button>
@@ -34,7 +34,7 @@ function renderCard($info = array(
 				<i class='fa fa-thumbs-down'>
 					<input name='amou' value='0' type='hidden' />
 					<input name='idUsuario' value='$info[idUsuario]' type='hidden' />
-					<input name='idFilme' value='$info[idFilme]' type='hidden' />
+					<input class='idFilme' name='idFilme' value='$info[idFilme]' type='hidden' />
 				</i>
 			 </button>
 		</form>

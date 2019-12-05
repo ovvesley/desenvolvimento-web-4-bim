@@ -46,3 +46,24 @@
 body {
   background-color: #e52b50;
 }
+
+.navbar-brand {
+  position: absolute;
+}
+
+.custom-nav {
+  background-color: #ae1534;
+  border-radius: 0px 0px 20px 20px;
+}
+.nav-item .nav-link {
+  display: grid;
+  text-align: center;
+}
+
+.item-meus-filmes {
+  width: 220px;
+  max-height: 200px;
+  float: left;
+  margin: 3px;
+  padding: 3px;
+}

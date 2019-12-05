@@ -1,16 +1,16 @@
 create database amovie;
 create table Usuario
 (
-    idUsuario int not null,
+    idUsuario int not null auto_increment,
     nome varchar (20) not null,
     senha varchar (20) not null,
-    PRIMARY KEY (idUsuario)
+    primary key (idUsuario)
 );
 create table Avaliacao
 (
-    idAvaliacao int not null,
+    idAvaliacao int not null auto_increment,
     idUsuario int not null,
     amou boolean not null,
-    PRIMARY KEY (idAvaliacao),
-    FOREIGN KEY (idUsuario) References Usuario (idUsuario)
+    primary key(idAvaliacao),
+    foreign key (idUsuario) references Usuario (idUsuario)
 );

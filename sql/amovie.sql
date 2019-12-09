@@ -14,3 +14,7 @@ create table Avaliacao
     primary key(idAvaliacao),
     foreign key (idUsuario) references Usuario (idUsuario)
 );
+alter table Avaliacao add
+(
+    idFilme int not null
+);

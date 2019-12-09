@@ -1,9 +1,4 @@
 <?php
-$username = $_POST['username'];
-$password = $_POST['password'];
-var_dump($username);
-var_dump($password);
-
 
 session_start();
 if (!isset($_SESSION["USER_INFO"])) {

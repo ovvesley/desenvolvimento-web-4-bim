@@ -1,10 +1,4 @@
 <?php 
-
-var_dump($username);
-var_dump($password);
-var_dump($repassword);
-
-
 session_start();
 require("mysql_connect.php");
 $nome = $_POST["nome"];

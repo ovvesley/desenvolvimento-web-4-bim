@@ -8,7 +8,7 @@
 }
 
 .cartao {
-  max-width: 700px;
+  width: 550px;
 }
 
 .img-card {
@@ -84,3 +84,8 @@ color: white;
 #close-session{
   display: contents;
 }
+
+#mymovies .card{
+  width: 280px;
+}
+

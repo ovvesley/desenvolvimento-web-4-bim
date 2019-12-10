@@ -33,13 +33,13 @@ if (!hasSession()) {
 		<div class="collapse navbar-collapse" id="textoNavbar">
 			<ul class="navbar-nav m-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#"> <i class="fa fa-home"></i> Inicio <span class="sr-only">(Página atual)</span></a>
+					<a class="nav-link" href="#"> <i class="fa fa-home"></i> Início <span class="sr-only">(Página atual)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="meus-filmes.php"> <i class="fa fa-heart"></i> meus ameis</a>
+					<a class="nav-link" href="meus-filmes.php"> <i class="fa fa-heart"></i> Meus Ameis</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="estatisticas.php"> <i class="fa fa-chart-bar"></i>estatisca</a>
+					<a class="nav-link" href="estatisticas.php"> <i class="fa fa-chart-bar"></i>Estatística</a>
 				</li>
 			</ul>
 		</div>

@@ -22,7 +22,7 @@ if (!hasSession()) {
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark custom-nav">
-		<a class="navbar-brand" href="#">amovie</a>
+		<a class="navbar-brand" href="#">amovie.</a>
 		<form id='close-session' action="close-session.php">
 			<a id='sign-out'> <button type="submit"> <i class="fa fa-sign-out-alt"> </i></button> </a>
 

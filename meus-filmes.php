@@ -54,9 +54,10 @@
             $meusameis = mysqli_fetch_assoc($result);
 
             while($meusameis){  
+                // var_dump($meusameis);
                 $idFilme = $meusameis['idFilme'];              
-                renderMyCard($idFilme);
-                $meusameis = mysqli_fetch_assoc($meusameis);
+                renderMyCard(array("id" => $idFilme));
+                $meusameis = mysqli_fetch_assoc($result);
             
             }
            

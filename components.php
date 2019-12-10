@@ -46,7 +46,7 @@ function renderCard($info = array(
 
 
 function renderMyCard($info = array(
-	'idFilme' => '0'
+	'id' => ''
 )){
 	echo "<div class='card m-5 p-4' id='$info[id]'>
 	<h6 id='ano-$info[id]'>ano</h6>

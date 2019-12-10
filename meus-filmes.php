@@ -8,7 +8,6 @@
     <title>meus filmes</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
 </head>
@@ -28,102 +27,41 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#"> <i class="fa fa-heart"></i> meus ameis <span class="sr-only">(Página atual)</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="estatisticas.php"> <i class="fa fa-chart-bar"></i>estatisca</a>
+                </li>
             </ul>
 
         </div>
     </nav>
 
     <div class="container w-100">
-        <div class="row">
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
+        <div class="row" id="mymovies">
 
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
 
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
-
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
-
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
-
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
-
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
-
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
-
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
-
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
-
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
-            <div class='card m-5 p-4'>
-                <h6 id='xxxx'>$info[ano]</h6>
-
-                <div class='item-meus-filmes'>
-                    <img class='card-img-top img-card' id='xxxxx' src='$info[image]' alt='Card image cap'>
-                </div>
-                <h6 id='xxxx'>$info[titulo]</h6>
-            </div>
+            <?php
+            session_start();
+            require "mysql_connect.php";
+            require "components.php";
+            $idUsuario = $_SESSION['user_info']['idUsuario'];
             
+            $query = "SELECT * FROM Usuario NATURAL JOIN Avaliacao
+            WHERE Usuario.idUsuario = $idUsuario AND amou = true";
+
+
+
+            $result = mysql_db_query($query);
+            $meusameis = mysqli_fetch_assoc($result);
+
+            while($meusameis){  
+                $idFilme = $meusameis['idFilme'];              
+                renderMyCard($idFilme);
+                $meusameis = mysqli_fetch_assoc($meusameis);
+            
+            }
+           
+            ?>
+
         </div>
 
 
@@ -132,6 +70,7 @@
         <script src="lib/popper/popper.min.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/meus-filmes.js"></script>
 </body>
 
 </html>

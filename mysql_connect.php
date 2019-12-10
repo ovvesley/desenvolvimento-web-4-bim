@@ -1,4 +1,5 @@
-<?php function mysql_db_query($query)
+<?php 
+function mysql_db_query($query)
 {
     // global $mysql_host, $mysql_user, $mysql_password, $mysql_database;
     require "./credencial.php";

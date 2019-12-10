@@ -1,3 +1,5 @@
+var baseUrlImgPoster = "https://image.tmdb.org/t/p/w500";
+var apiKey = "85f88502058b0253f06934679a1c8f3b";
 function myMoviesSetup() {
   const myMovies = getMyMovies();
   myMovies.forEach(item => {

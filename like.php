@@ -12,8 +12,7 @@ function mysqli_conecta_verifica($query)
     $result = mysqli_query($con, $query); 
     return $result;
 }
-$query = "SELECT idUsua FROM Usuario WHERE nome='$nome'";
-$result = mysqli_conecta_verifica($query);
+
 
             if ($amou == 0) {
                 $insert = mysqli_conecta_verifica("INSERT INTO `Avaliacao`('amou', 'idFilme') VALUES ('$amou', '$idFilme') ");

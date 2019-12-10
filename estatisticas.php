@@ -22,13 +22,13 @@
         <div class="collapse navbar-collapse" id="textoNavbar">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="inicio.php"> <i class="fa fa-home"></i> Inicio </a>
+                    <a class="nav-link" href="inicio.php"> <i class="fa fa-home"></i> Início </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="meus-filmes.php"> <i class="fa fa-heart"></i> meus ameis <span class="sr-only">(Página atual)</span></a>
+                    <a class="nav-link" href="meus-filmes.php"> <i class="fa fa-heart"></i> Meus Ameis <span class="sr-only">(Página atual)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"> <i class="fa fa-chart-bar"></i>estatisca</a>
+                    <a class="nav-link" href="#"> <i class="fa fa-chart-bar"></i>Estatística</a>
                 </li>
             </ul>
 
@@ -37,7 +37,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h6>Estatistica 1 </h6>
+                <h6>Gêneros do Avaliados </h6>
             </div>
 
             <div class="card-body">
@@ -47,7 +47,7 @@
 
         <div class="card mt-4">
             <div class="card-header">
-                <h6>Estatistica 1 </h6>
+                <h6>Qantidade de Avaliados</h6>
             </div>
 
             <div class="card-body">

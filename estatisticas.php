@@ -34,13 +34,39 @@
 
         </div>
     </nav>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h6>Estatistica 1 </h6>
+            </div>
+
+            <div class="card-body">
+                
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h6>Estatistica 1 </h6>
+            </div>
+
+            <div class="card-body">
+
+            </div>
+        </div>
+    </div>
+
+
+
 
 
 
     <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+    <script src="lib/d3.min.js"></script>
     <script src="lib/popper/popper.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/estatisticas.js"></script>
 </body>
 
 </html>

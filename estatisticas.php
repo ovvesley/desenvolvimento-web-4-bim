@@ -37,7 +37,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h6>Gêneros do Avaliados </h6>
+                <h6>Gêneros dos Avaliados </h6>
             </div>
 
             <div class="card-body">

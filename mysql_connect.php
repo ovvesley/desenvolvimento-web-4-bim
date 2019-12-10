@@ -1,4 +1,5 @@
-<?php function mysql_db_query($query)
+<?php 
+function mysql_db_query($query)
 {
     require "./credencial.php";
     error_log("$host, $usuario, $senha, $database");

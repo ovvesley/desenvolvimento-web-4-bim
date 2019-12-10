@@ -67,3 +67,20 @@ body {
   margin: 3px;
   padding: 3px;
 }
+
+
+#sign-out{
+  position: absolute;
+  right: 5px;
+  font-size: 40px;
+  color: white;
+}
+#sign-out button{
+border: none;
+background: transparent;
+color: white;
+  
+}
+#close-session{
+  display: contents;
+}

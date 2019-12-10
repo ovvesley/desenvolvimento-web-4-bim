@@ -45,4 +45,15 @@ function renderCard($info = array(
 }
 
 
-?>
+function renderMyCard($info = array(
+	'id' => ''
+)){
+	echo "<div class='card m-5 p-4' id='$info[id]'>
+	<h6 id='ano-$info[id]'>ano</h6>
+
+	<div class='item-meus-filmes'>
+		<img class='card-img-top img-card' id='imagem-$info[id]' src='images/loading.gif' alt='Card image cap'>
+	</div>
+	<h6 id='titulo-$info[id]'></h6>
+</div>";
+}

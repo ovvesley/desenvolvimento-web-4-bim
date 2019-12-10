@@ -1,6 +1,7 @@
 var baseUrlImgPoster = "https://image.tmdb.org/t/p/w500";
+var apiKey = "85f88502058b0253f06934679a1c8f3b";
 function fetchMovies() {
-  var apiKey = "85f88502058b0253f06934679a1c8f3b";
+  
   var pageSize = generatePage();
   var url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=pt-BR&page=${pageSize}`;
   return fetch(url)

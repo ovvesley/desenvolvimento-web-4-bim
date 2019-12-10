@@ -2,8 +2,8 @@
 session_start();
 require "components.php";
 require "session.php";
-if (!hasSession()){
-	header("Location: pagina_erro.php" );
+if (!hasSession()) {
+	header("Location: pagina_erro.php");
 }
 ?>
 
@@ -23,6 +23,10 @@ if (!hasSession()){
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark custom-nav">
 		<a class="navbar-brand" href="#">amovie</a>
+		<form id='close-session' action="close-session.php">
+			<a id='sign-out'> <button type="submit"> <i class="fa fa-sign-out-alt"> </i></button> </a>
+
+		</form>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -33,8 +37,11 @@ if (!hasSession()){
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="meus-filmes.php"> <i class="fa fa-heart"></i> meus ameis</a>
-				</li>				
-			</ul>			
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="estatisticas.php"> <i class="fa fa-chart-bar"></i>estatisca</a>
+				</li>
+			</ul>
 		</div>
 	</nav>
 

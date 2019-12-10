@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 function createSession($userInfo)
 {
@@ -26,3 +25,7 @@ function hasErrorLogin(){
     return isset($_SESSION['error']);
 }
 
+function closeSession(){
+    session_destroy();
+    header("Location: index.php");
+}

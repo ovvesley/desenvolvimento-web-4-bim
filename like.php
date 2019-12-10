@@ -16,7 +16,6 @@ $query = "SELECT idUsua FROM Usuario WHERE nome='$nome'";
 $result = mysqli_conecta_verifica($query);
 
             if ($amou == 0) {
-                $amou=false;
                 $insert = mysqli_conecta_verifica("INSERT INTO `Avaliacao`('amou', 'idFilme') VALUES ('$amou', '$idFilme') ");
                 echo "Não amou";
                 if (!$insert) {
@@ -27,7 +26,6 @@ $result = mysqli_conecta_verifica($query);
                 }
             }
             if($amou == 1){
-                $amou=true;
                 $insert = mysqli_conecta_verifica("INSERT INTO `Avaliacao`('amou', idFilme) VALUES ('$amou', '$idFilme') ");
                 echo "Amou";
                 if (!$insert) {

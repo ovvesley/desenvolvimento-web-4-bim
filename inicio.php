@@ -51,7 +51,15 @@ if (!hasSession()) {
 				<div class="col-10 d-flex justify-content-center">
 					<div class="cartao ">
 						<?php
-						renderCard()
+						$idUsuario = $_SESSION['user_info']['idUsuario'];
+						// echo $idUsuario;
+						renderCard(array(
+							"titulo" => "Loading...",
+							"ano" => "Loading...",
+							"image" => "images/loading.gif",
+							'idUsuario' => $idUsuario,
+							'idFilme' => '0'
+						))
 						?>
 					</div>
 				</div>
